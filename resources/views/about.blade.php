@@ -1,4 +1,4 @@
-<x-layout title="About">
+<x-layout>
     <h1>About</h1>
     <div>
         <p>This is a simple welcome page.</p>

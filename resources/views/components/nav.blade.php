@@ -13,19 +13,19 @@
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-48 p-2 shadow right-0">
         <li>
-          <a href="{{ route('home') }}" class="flex items-center"> 
+          <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'menu-active' : '' }} flex items-center"> 
             <div class="text-sm">トップ</div>
             <div class="text-xs text-gray-500">TOP</div>      
           </a>
         </li>
         <li>
-          <a href="{{ route('content.index') }}" class="flex itenms-center">  
-            <div class="text-sm">過去出演</div>
-            <div class="text-xs text-gray-500">CONTENT</div>
+          <a href="{{ route('content.index') }}" class="{{ request()->routeIs('content.index') ? 'menu-active' : '' }} flex itenms-center">  
+            <div class="text-sm">メディア</div>
+            <div class="text-xs text-gray-500">MEDIA</div>
           </a>
         </li>
         <li>
-        <a href="{{ route('live') }}" class="flex itenms-center">  
+        <a href="{{ route('live.index') }}" class="{{ request()->routeIs('live.index') ? 'menu-active' : '' }} flex itenms-center">  
           <div class="text-md">ライブ</div>
           <div class="text-xs text-gray-500">LIVE</div>
         </a>
@@ -35,19 +35,19 @@
     </div>
     <ul class="menu menu-horizontal px-1 hidden lg:flex">
       <li>
-        <a href="{{ route('home') }}" class="flex flex-col items-center"> 
+        <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'menu-active' : '' }} flex flex-col items-center"> 
           <div class="text-md">トップ</div>
           <div class="text-sm text-gray-500">TOP</div>      
         </a>
       </li>
       <li>
-        <a href="{{ route('content.index') }}" class="flex flex-col itenms-center">  
-          <div class="text-md">過去出演</div>
-          <div class="text-xs text-gray-500">CONTENT</div>
+        <a href="{{ route('content.index') }}" class="{{ request()->routeIs('content.index') ? 'menu-active' : '' }} flex flex-col itenms-center">  
+          <div class="text-md">メディア</div>
+          <div class="text-xs text-gray-500">MEDIA</div>
         </a>
       </li>
       <li>
-        <a href="{{ route('live') }}" class="flex flex-col itenms-center">  
+        <a href="{{ route('live.index') }}" class="{{ request()->routeIs('live.index') ? 'menu-active' : '' }} flex flex-col itenms-center">  
           <div class="text-md">ライブ</div>
           <div class="text-xs text-gray-500">LIVE</div>
         </a>
