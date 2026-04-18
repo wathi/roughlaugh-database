@@ -1,6 +1,6 @@
 <nav class="navbar bg-base-100 shadow-sm flex justify-between lg:px-8">
   <div class="lg:navbar-start">
-    <a class=" flex flex-col items-start" href="/">
+    <a class=" flex flex-col items-start" href="{{ route('home') }}">
       <div class="lg:text-xl text-lg">ラフｘラフデータベース</div>
       <div class="lg:text-base text-md text-gray-500">Rough x Laugh Database -unoffical fans site- </div>
     </a>
