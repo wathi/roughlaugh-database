@@ -1,6 +1,6 @@
 <x-layout>
-  <h1 class="text-2xl font-bold text-center mb-2">出版</h1>
-  <h2 class="text-xl text-center mb-8">PUBLISHING</h2>
+  <h1 class="text-2xl font-bold text-center mb-2">書籍・雑誌</h1>
+  <h2 class="text-xl text-center mb-8">PUBLICATION</h2>
   @if(!$posts)
   <p>No posts available.</p>
   @else
