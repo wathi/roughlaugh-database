@@ -1,6 +1,7 @@
-<x-layout>  
-    <h1>Contact</h1>
-    <x-card class="bg-red-200">
-        <p>This is contact page.</p>
-    </x-card>
+<x-layout>
+    <h1 class="text-2xl font-bold text-center mb-2">問い合わせ</h1>
+    <h2 class="text-xl text-center mb-8">CONTACT</h2>
+    <div class="wp-content">
+        {!! $page['content']['rendered'] !!}
+    </div>
 </x-layout>

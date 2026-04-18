@@ -15,7 +15,7 @@
           <th></th>
           <th>タイトル</th>
           <th>メンバー</th>
-          <th>アーカイブ</th>
+          <th>動画</th>
           <th></th>
         </tr>
       </thead>

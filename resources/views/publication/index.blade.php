@@ -1,6 +1,6 @@
 <x-layout>
-  <h1 class="text-2xl font-bold text-center mb-2">記事</h1>
-  <h2 class="text-xl text-center mb-8">ARTICLE</h2>
+  <h1 class="text-2xl font-bold text-center mb-2">出版</h1>
+  <h2 class="text-xl text-center mb-8">PUBLISHING</h2>
   @if(!$posts)
   <p>No posts available.</p>
   @else
@@ -22,16 +22,16 @@
         <tr>
           <td class="w-32">{{ (new DateTime($post['date']))->format('Y-m-d')  }}</td>
           <td class="w-64">
-            <figure>
-              <a href="{{ $post['acf']['article_url'] }}" target="_blank">
-                <img src="{{ $post['acf']['featured_img_url'] }}" alt="{{ $post['title']['rendered'] }}" class="hover:opacity-90"/>
-              </a>
-            </figure>
+            <a href="{{ $post['acf']['article_url'] }}" target="_blank" class="hover:opacity-90">
+              <figure>
+                <img src="{{ $post['acf']['featured_img_url'] }}" alt="{{ $post['title']['rendered'] }}" />
+              </figure>
+            </a>
           </td>
           <td>
-            <a href="{{ $post['acf']['article_url'] }}" target="_blank">
-              <h2 class="lg:text-lg sm:text-md font-bold hover:underline mb-2">{{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}</h2>
-            </a>
+          <a href="{{ $post['acf']['article_url'] }}" target="_blank" class="hover:underline">
+            <h2 class="lg:text-lg sm:text-md font-bold mb-2">{{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}</h2>
+          </a>   
             <div class="badge badge-ghost badge-base">{{$post['acf']['source'] }}</div>
           </td>
           <td>
@@ -57,9 +57,7 @@
     @foreach($posts as $post)
     <div class="block lg:hidden card bg-base-100 w-96 shadow-sm">
       <figure>
-        <a href="{{ $post['acf']['article_url'] }}" target="_blank">
-          <img src="{{ $post['acf']['featured_img_url'] }}" alt="{{ $post['title']['rendered'] }}" class="hover:opacity-90"/>
-        </a>  
+        <img src="{{ $post['acf']['featured_img_url'] }}" alt="{{ $post['title']['rendered'] }}" />
       </figure>
       <div class="card-body">
         <div>{{ (new DateTime($post['date']))->format('Y-m-d')  }}</div>
@@ -68,7 +66,7 @@
             {{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}
           </a>
         </h2>
-        <div class="badge badge-secondary">{{$post['acf']['source'] }}</div>
+        <div class="badge badge-secondary"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
         <div class="card-actions justify-start">
           @if($post['acf']['member'])
           @foreach($post['acf']['member'] as $member)

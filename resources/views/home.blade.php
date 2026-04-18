@@ -1,4 +1,5 @@
 <x-layout>
-    <h1>Welcome to Laravel!</h1>
-  
+    <div class="wp-content">
+        {!! $page['content']['rendered'] !!}
+    </div>
 </x-layout>

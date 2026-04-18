@@ -12,10 +12,10 @@ class ContentController extends Controller
         $currentPage = request()->query('page', 1);
         $response = Http::get($this->apiUrl . 'posts', [
             'categories' => 21,
-            'per_page' => 10,
+            'per_page' => 15,
             'page' => $currentPage,
         ]);
-        // dd($response->header('X-WP-TotalPages'));
+        // dd($response->json());
         return view('contents.index', [
             'posts' => $response->json(),
             'currentPage' => $currentPage,
