@@ -27,7 +27,7 @@ class ContentController extends Controller
     {
         $post = Http::get($this->apiUrl . "posts/{$id}")->json();
         // dd($post);
-        if (array_key_exists('data', $post) && ($post['data']['status'] === 401 || $post['data']['status'] === 404)) {
+        if (array_key_exists('data', $post) && ($post['data']['status'] === 401 || $post['data']['status'] === 404) || $post['categories'] !== [21]) {
             // dd($post['data']['status']); // Debug: Check the 'data' structure
             abort(404);
         }

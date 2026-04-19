@@ -14,8 +14,8 @@
           <th>放送日</th>
           <th></th>
           <th>タイトル</th>
+          <th>セットリスト</th>
           <th>メンバー</th>
-          <th>動画</th>
           <th></th>
         </tr>
       </thead>
@@ -29,11 +29,12 @@
             </figure>
           </td>
           <td>
-            <a href="{{ route('content.show', ['id' => $post['id']]) }}" class="hover:underline">
+            <a href="{{ route('live.show', ['id' => $post['id']]) }}" class="hover:underline">
               <h2 class="lg:text-lg sm:text-md font-bold mb-2">{{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}</h2>
             </a>
             <div class="badge badge-ghost badge-base"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
           </td>
+          <td></td>
           <td>
             <div class="w-64 flex flex-col gap-1">
               @if($post['acf']['member'])
@@ -42,9 +43,6 @@
               @endforeach
               @endif
             </div>
-          </td>
-          <td>
-            <iframe width="340" height="180" src="{{ $post['acf']['embed_url'] }}"></iframe>
           </td>
         </tr>
         @endforeach

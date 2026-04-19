@@ -21,4 +21,18 @@ class LiveController extends Controller
       'totalPages' => (int) $response->header('X-WP-TotalPages'),
     ]);
   }
+
+  public function show($id)
+  {
+    $post = Http::get($this->apiUrl . "posts/{$id}")->json();
+    // dd($post);
+    if (array_key_exists('data', $post) && ($post['data']['status'] === 401 || $post['data']['status'] === 404) || $post['categories'] !== [25]) {
+      // dd($post['data']['status']); // Debug: Check the 'data' structure
+      abort(404);
+    }
+
+    if (array_key_exists('id', $post)) {
+      return view('live.show', ['post' => $post]);
+    }
+  }
 }
