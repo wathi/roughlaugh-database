@@ -63,7 +63,7 @@
       <div class="card-body">
         <div>{{ (new DateTime($post['date']))->format('Y-m-d')  }}</div>
         <h2 class="card-title">
-          <a href="{{ route('content.show', ['id' => $post['id']]) }}" class="hover:underline">
+          <a href="{{ route('live.show', ['id' => $post['id']]) }}" class="hover:underline">
             {{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}
           </a>
         </h2>
