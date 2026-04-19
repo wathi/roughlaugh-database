@@ -11,11 +11,10 @@
       <!-- head -->
       <thead>
         <tr>
-          <th>放送日</th>
+          <th>日付</th>
           <th></th>
           <th>タイトル</th>
           <th>セットリスト</th>
-          <th>メンバー</th>
           <th></th>
         </tr>
       </thead>
@@ -34,15 +33,12 @@
             </a>
             <div class="badge badge-ghost badge-base"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
           </td>
-          <td></td>
           <td>
-            <div class="w-64 flex flex-col gap-1">
-              @if($post['acf']['member'])
-              @foreach($post['acf']['member'] as $member)
-              <div class="badge badge-outline">{{$member}}</div>
+             @if($post['acf']['set_list_relationship'])
+              @foreach($post['acf']['set_list_relationship'] as $id)
+                <div class="badge badge-outline">{{$set_list_map[$id] ?? 'Set list not found'}}</div>
               @endforeach
-              @endif
-            </div>
+            @endif
           </td>
         </tr>
         @endforeach
@@ -68,13 +64,6 @@
           </a>
         </h2>
         <div class="badge badge-secondary"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
-        <div class="card-actions justify-start">
-          @if($post['acf']['member'])
-          @foreach($post['acf']['member'] as $member)
-          <div class="text-xs badge badge-outline">{{$member}}</div>
-          @endforeach
-          @endif
-        </div>
       </div>
     </div>
     @endforeach

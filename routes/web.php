@@ -8,7 +8,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\ContactController;
 
-Route::view('about', 'about')->name('about');
+
 
 //Controller routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -20,3 +20,6 @@ Route::get('article', [ArticleController::class, 'index'])->name('article.index'
 Route::get('article/{id}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('publication', [PublicationController::class, 'index'])->name('publication.index');
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
+
+// Route::view('about', 'about')->name('about');
+Route::get('about', [LiveController::class, 'get_set_list'])->name('live.get_set_list');

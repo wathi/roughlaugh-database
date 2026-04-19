@@ -15,10 +15,21 @@ class LiveController extends Controller
       'page' => $currentPage,
     ]);
     // dd($response->json());
+    $posts = $response->json();
+
+    $set_list = Http::get($this->apiUrl . 'song', ['per_page' => 100])->json();
+    // dd($set_list);
+    $set_list_map = [];
+    foreach ($set_list as $song) {
+      $set_list_map[$song['id']] = $song['title']['rendered'];
+    }
+    // dd($set_list_map);
+
     return view('live.index', [
-      'posts' => $response->json(),
+      'posts' => $posts,
       'currentPage' => $currentPage,
       'totalPages' => (int) $response->header('X-WP-TotalPages'),
+      'set_list_map' => $set_list_map,
     ]);
   }
 
@@ -32,7 +43,14 @@ class LiveController extends Controller
     }
 
     if (array_key_exists('id', $post)) {
+      // dd($post); // Debug: Check the post data structure
       return view('live.show', ['post' => $post]);
     }
+  }
+
+  public function get_set_list()
+  {
+    $set_list = Http::get($this->apiUrl . 'set_list');
+    dd($set_list->json());
   }
 }

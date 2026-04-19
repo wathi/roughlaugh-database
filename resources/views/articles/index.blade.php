@@ -13,6 +13,7 @@
         <tr>
           <th>日付</th>
           <th></th>
+          <th></th>
           <th>タイトル</th>
           <th>メンバー</th>
         </tr>
@@ -21,6 +22,7 @@
         @foreach($posts as $post)
         <tr>
           <td class="w-32">{{ (new DateTime($post['date']))->format('Y-m-d')  }}</td>
+          <td class="w-40">{{ $post['acf']['type'] }}</td>
           <td class="w-64">
             <figure>
               <a href="{{ $post['acf']['article_url'] }}" target="_blank">
