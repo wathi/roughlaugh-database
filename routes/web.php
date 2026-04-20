@@ -22,4 +22,3 @@ Route::get('publication', [PublicationController::class, 'index'])->name('public
 Route::get('contact', [ContactController::class, 'index'])->name('contact');
 
 // Route::view('about', 'about')->name('about');
-Route::get('about', [LiveController::class, 'get_set_list'])->name('live.get_set_list');

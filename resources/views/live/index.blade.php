@@ -33,12 +33,21 @@
             </a>
             <div class="badge badge-ghost badge-base"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
           </td>
-          <td>
-             @if($post['acf']['set_list_relationship'])
-              @foreach($post['acf']['set_list_relationship'] as $id)
-                <div class="badge badge-outline">{{$set_list_map[$id] ?? 'Set list not found'}}</div>
-              @endforeach
-            @endif
+          <td class="flex gap-4">
+            <div class="w-64 flex flex-col gap-1">
+               @if($post['acf']['set_list_01'])
+                @foreach($post['acf']['set_list_01'] as $id)
+                  <div class  ="badge">{{$song_list_map[$id] ?? ''}}</div>
+                @endforeach
+              @endif
+            </div>
+            <div class="w-64 flex flex-col gap-1">
+               @if($post['acf']['set_list_02'])
+                @foreach($post['acf']['set_list_02'] as $id)
+                  <div class="badge">{{$song_list_map[$id] ?? ''}}</div>
+                @endforeach
+              @endif
+            </div>
           </td>
         </tr>
         @endforeach

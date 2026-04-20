@@ -17,19 +17,19 @@ class LiveController extends Controller
     // dd($response->json());
     $posts = $response->json();
 
-    $set_list = Http::get($this->apiUrl . 'song', ['per_page' => 100])->json();
-    // dd($set_list);
-    $set_list_map = [];
-    foreach ($set_list as $song) {
-      $set_list_map[$song['id']] = $song['title']['rendered'];
+    $song_list = Http::get($this->apiUrl . 'song', ['per_page' => 100])->json();
+    // dd($song_list);
+    $song_list_map = [];
+    foreach ($song_list as $song) {
+      $song_list_map[$song['id']] = $song['title']['rendered'];
     }
-    // dd($set_list_map);
+    // dd($song_list_map);
 
     return view('live.index', [
       'posts' => $posts,
       'currentPage' => $currentPage,
       'totalPages' => (int) $response->header('X-WP-TotalPages'),
-      'set_list_map' => $set_list_map,
+      'song_list_map' => $song_list_map,
     ]);
   }
 
