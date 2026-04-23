@@ -6,7 +6,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\LiveController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicationController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactFormController;
 
 
 
@@ -19,6 +19,6 @@ Route::get('live/{id}', [LiveController::class, 'show'])->name('live.show');
 Route::get('article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('article/{id}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('publication', [PublicationController::class, 'index'])->name('publication.index');
-Route::get('contact', [ContactController::class, 'index'])->name('contact');
+Route::get('contact', [ContactFormController::class, 'index'])->name('contactform');
 
 // Route::view('about', 'about')->name('about');

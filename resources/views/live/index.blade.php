@@ -31,7 +31,7 @@
             <a href="{{ route('live.show', ['id' => $post['id']]) }}" class="hover:underline">
               <h2 class="lg:text-lg sm:text-md font-bold mb-2">{{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}</h2>
             </a>
-            <div class="badge badge-ghost badge-base"><a href="{{ $post['acf']['source_url'] }}" target="_blank">{{$post['acf']['source'] }}</a></div>
+            <div class="badge badge-ghost badge-base">{{ $post['acf']['source'] }}</div>
           </td>
           <td class="flex gap-4">
             <div class="w-64 flex flex-col gap-1">

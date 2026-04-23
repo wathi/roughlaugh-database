@@ -27,9 +27,9 @@
       <div>
       <h6 class="lg:text-base text-sm text-gray-500 font-semibold">ご連絡 Contact</h6>
       <p class="text-base-content lg:text-sm text-xs  mb-2">
-        情報提供、訂正、ご質問、ご要望など、<a href="route('contact')" class="text-gray-600 link link-hover">問い合わせフォーム</a>もしくは管理人までお願いいたします</p>
+        情報提供、訂正、ご質問、ご要望など、<a href="{{ route('contactform') }}" class="text-gray-600 link link-hover">問い合わせフォーム</a>もしくは管理人までお願いいたします</p>
       <p class="text-base-content lg:text-sm text-xs ">
-        To provide information, correction or any questions, please submit <a href="route('contact')" class="text-gray-600 link link-hover">the contact form</a> or contact administrator.    </p>
+        To provide information, correction or any questions, please submit <a href="{{ route('contactform') }}" class="text-gray-600 link link-hover">the contact form</a> or contact administrator.    </p>
     </div>
   </div>
 </footer>
