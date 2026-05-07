@@ -1,6 +1,6 @@
 <x-layout>
-  <h1 class="text-2xl font-bold text-center mb-2">書籍・雑誌</h1>
-  <h2 class="text-xl text-center mb-8">PUBLICATION</h2>
+  <h1 class="text-2xl font-bold text-center mb-2">その他</h1>
+  <h2 class="text-xl text-center mb-8">OTHERS</h2>
   @if(!$posts)
   <p>No posts available.</p>
   @else
@@ -14,7 +14,6 @@
           <th>日付</th>
           <th></th>
           <th>タイトル</th>
-          <th>メンバー</th>
         </tr>
       </thead>
       <tbody>
@@ -29,19 +28,10 @@
             </a>
           </td>
           <td>
-          <a href="{{ route('publication.show', ['id' => $post['id']]) }}" class="hover:underline">
+          <a href="{{ route('others.show', ['id' => $post['id']]) }}" class="hover:underline">
             <h2 class="lg:text-lg sm:text-md font-bold mb-2">{{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}</h2>
           </a>   
             <div class="badge badge-ghost badge-base">{{$post['acf']['source'] }}</div>
-          </td>
-          <td>
-            <div class="w-64 flex flex-col gap-1">
-              @if($post['acf']['member'])
-              @foreach($post['acf']['member'] as $member)
-              <div class="badge badge-outline">{{$member}}</div>
-              @endforeach
-              @endif
-            </div>
           </td>
         </tr>
         @endforeach

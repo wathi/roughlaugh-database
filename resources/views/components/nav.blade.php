@@ -39,6 +39,18 @@
           <div class="text-sm text-gray-500">PUBLICATION</div>
         </a>
       </li>
+            <li>
+        <a href="{{ route('others.index') }}" class="{{ request()->routeIs('others.index') ? 'menu-active' : '' }} flex flex-col items-center">  
+          <div class="text-base">その他</div>
+          <div class="text-sm text-gray-500">OTHERS</div>
+        </a>
+      </li>
+            <li>
+        <a href="{{ route('fans.index') }}" class="{{ request()->routeIs('fans.index') ? 'menu-active' : '' }} flex flex-col items-center">  
+          <div class="text-base">ROAD to </div>
+          <div class="text-sm text-gray-500">ラフり隊</div>
+        </a>
+      </li>
     </ul>
         <!-- Mobile Menu -->
     <div class="dropdown">
