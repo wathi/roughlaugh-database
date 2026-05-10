@@ -10,7 +10,7 @@ use App\Http\Controllers\OthersController;
 use App\Http\Controllers\FansController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\CheckSalesStatusController;
-
+use App\Http\Controllers\CacheController;
 
 //Controller routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -28,4 +28,5 @@ Route::get('fans', [FansController::class, 'index'])->name('fans.index');
 Route::get('fans/{id}', [FansController::class, 'show'])->name('fans.show');
 Route::get('contact', [ContactFormController::class, 'index'])->name('contactform');
 Route::get('status', [CheckSalesStatusController::class, 'index'])->name('status.index');
-// Route::view('about', 'about')->name('about');
+
+Route::get('/clear-cache', [CacheController::class, 'clear']);
