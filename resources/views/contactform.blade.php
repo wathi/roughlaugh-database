@@ -1,26 +1,37 @@
 <x-layout title="CONTACT | ラフｘラフデータベース">
     <h1 class="text-2xl font-bold text-center mb-2">問い合わせ</h1>
     <h2 class="text-xl text-center mb-8">CONTACT</h2>
-    {{-- <div class="wp-content">
-    {!! $page['content']['rendered'] !!}
-    </div> --}}
-
     <div class="max-w-2xl mx-auto">
         <section class="mb-16">
             <p class="mb-4">
                 情報提供、訂正、ご意見、ご感想など、下記のフォームよりご連絡をお願いいたします。<br />
                 もしくは管理人まで。<br />
                 <a class="twitter-follow-button" href="https://twitter.com/wa_rldb"><br /></a>
-                <script async src="https://platform.twitter.com/widgets.js"></script>
             </p>
             <p class="mb-4">
                 For information, correction or any questions, please submit the contact form, or contact administrator directly.<br />
                 <a class="twitter-follow-button" href="https://twitter.com/wa_rldb"><br /></a>
-                <script async src="https://platform.twitter.com/widgets.js"></script>
             </p>
         </section>
-<section class="hidden">
-    <form method="POST" action="{{ route('contactform') }}" class="space-y-4">
+
+            @if ($errors->any())
+      <div class="alert alert-error mb-4">
+        <ul>
+          @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+      </div>
+    @endif
+
+    @if (session('success'))
+      <div class="alert alert-success mb-4">
+        {{ session('success') }}
+      </div>
+    @endif
+
+<section>
+    <form method="POST" action="{{ route('contactform.store') }}" class="space-y-4">
         @csrf
         <div>
             <label for="name" class="block font-medium text-gray-700 mb-1">お名前 Name</label>
@@ -40,7 +51,7 @@
         </div>
         <div>
             <button type="submit" class="py-2 px-4 text-white bg-gray-600 hover:bg-gray-500 hover:cursor-pointer">
-                送信 (Send)
+                Send
             </button>
         </div>
     </form>
