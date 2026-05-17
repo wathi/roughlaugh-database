@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="PUBLICATION| ラフｘラフデータベース">
   <h1 class="text-2xl font-bold text-center mb-2">書籍・雑誌</h1>
   <h2 class="text-xl text-center mb-8">PUBLICATION</h2>
   @if(!$posts)
@@ -62,7 +62,7 @@
       <div class="card-body">
         <div>{{ (new DateTime($post['date']))->format('Y-m-d')  }}</div>
         <h2 class="card-title">
-          <a href="{{ $post['acf']['article_url'] }}" target="_blank" class="hover:underline">
+          <a href="{{ route('publication.show', ['id' => $post['id']]) }}" target="_blank" class="hover:underline">
             {{ html_entity_decode($post['title']['rendered'], ENT_QUOTES | ENT_HTML5, 'UTF-8') }}
           </a>
         </h2>

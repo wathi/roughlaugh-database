@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="MEDIA | ラフｘラフデータベース">
     <h1 class="text-2xl font-bold text-center mb-2">メディア</h1>
     <h2 class="text-xl text-center mb-8">MEDIA</h2>
     @if(!$posts)

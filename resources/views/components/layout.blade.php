@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ラフラフの非公式ファンサイトです。過去出演、インターフュー、ライブ、関連情報を記載しています。
     rough x laugh unofficial fans site. List media appearances, interviews, live performances, and related information.">
-    <title>ラフｘラフデータベース - rough x laugh database -unofficial fans site-</title>
+    <title>{{ $title }}</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     {{-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>  --}}

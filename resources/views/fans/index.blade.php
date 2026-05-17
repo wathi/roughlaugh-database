@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="ラフり隊 | ラフｘラフデータベース">
   <h1 class="text-2xl font-bold text-center mb-2">ラフり隊</h1>
   <h2 class="text-xl text-center mb-8"></h2>
   @if(!$posts)
