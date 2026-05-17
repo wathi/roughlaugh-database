@@ -1,5 +1,5 @@
 <x-layout>
     <div class="wp-content">
-        {!! $page['content']['rendered'] !!}
+        {!! $page !!}
     </div>
 </x-layout>

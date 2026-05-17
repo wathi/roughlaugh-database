@@ -42,8 +42,12 @@ class LiveController extends Controller
       cachePrefix: 'live'
     );
 
+    $postContent = $this->postService->clean_script_tags(
+      $result['post']['content']['rendered']
+    );
+
     return response()
-      ->view('live.show', ['post' => $result['post']])
+      ->view('live.show', ['post' => $result['post'], 'postContent' => $postContent])
       ->header('X-Cache', $result['isCached'] ? 'HIT' : 'MISS');
   }
 }

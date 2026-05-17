@@ -14,6 +14,29 @@ class PostService
     $this->apiUrl = config('services.api.api_url');
   }
 
+  public function getPage(
+    string $cachePrefix,
+    string $slug
+  ) {
+    $cacheKey = "{$cachePrefix}";
+    $isCached = Cache::has($cacheKey);
+
+    $data = Cache::remember($cacheKey, now()->addMinutes(10), function () use ($slug) {
+      $response =  Http::get($this->apiUrl . 'pages', [
+        'slug' => $slug,
+      ]);
+
+      return [
+        'page' => $response->json()[0],
+      ];
+    });
+
+    return [
+      'page' => $data['page'],
+      'isCached' => $isCached,
+    ];
+  }
+
   /**
    * Get paginated posts for a category
    */
@@ -94,5 +117,14 @@ class PostService
       return  Http::get($this->apiUrl . 'song', ['per_page' => 100])->json();
     });
     return $data;
+  }
+
+  public function clean_script_tags(string $html): string
+  {
+    return preg_replace(
+      '/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/i',
+      '',
+      $html
+    );
   }
 }

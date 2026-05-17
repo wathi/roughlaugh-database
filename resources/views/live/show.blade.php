@@ -12,7 +12,9 @@
         <div> | </div>
         <div>{{ $post['acf']['source'] }}</div>
       </div>
-      <div>{!! $post['content']['rendered'] !!}</div>
+      <div>{!! $postContent !!}</div>
+      {{-- <div>{!! dd($postContent) !!}</div> --}}
+       {{-- <div>{!! dd($post['content']['rendered']) !!}</div> --}}
     </div>
   </div>
 </x-layout>
