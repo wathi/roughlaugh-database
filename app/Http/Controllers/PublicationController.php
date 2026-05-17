@@ -2,53 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Http;
+use App\Services\PostService;
 
 class PublicationController extends Controller
 {
+  public function __construct(protected PostService $postService) {}
+
   public function index()
   {
     $currentPage = request()->query('page', 1);
-    $cacheKey = "publication_{$currentPage}";
-    $isCached = Cache::has($cacheKey);
+    $result = $this->postService->getPostsByCategory(
+      categoryId: 24,
+      cachePrefix: 'publication',
+      perPage: 20,
+      page: $currentPage
+    );
 
-    $data = Cache::remember($cacheKey, now()->addMinutes(10), function () use ($currentPage) {
-      $response = Http::get($this->apiUrl . 'posts', [
-        'categories' => 24,
-        'per_page' => 10,
-        'page' => $currentPage,
-      ]);
-      return [
-        'posts' => $response->json(),
-        'totalPages' => (int) $response->header('X-WP-TotalPages'),
-      ];
-    });
-
-    // dd($response->header('X-WP-TotalPages'));
-    return response()->view('publication.index', [
-      'posts' => $data['posts'],
-      'currentPage' => $currentPage,
-      'totalPages' => $data['totalPages'],
-    ])->header('X-Cache', $isCached ? 'HIT' : 'MISS');
+    return response()
+      ->view('publication.index', [
+        'posts' => $result['posts'],
+        'currentPage' => $currentPage,
+        'totalPages' => $result['totalPages'],
+      ])
+      ->header('X-Cache', $result['isCached'] ? 'HIT' : 'MISS');
   }
 
-  public function show($id)
+  public function show(int $id)
   {
-    $cacheKey = "post_{$id}";
-    $isCached = Cache::has($cacheKey);
+    $result = $this->postService->getPostById(
+      $id,
+      categoryId: 24,
+      cachePrefix: 'publication',
+    );
 
-    $post = Cache::remember($cacheKey, now()->addMinutes(10), function () use ($id) {
-      return Http::get($this->apiUrl . "posts/{$id}")->json();
-    });
-    // dd($post);
-    if (array_key_exists('data', $post) && ($post['data']['status'] === 401 || $post['data']['status'] === 404) || $post['categories'] !== [24]) {
-      // dd($post['data']['status']); // Debug: Check the 'data' structure
-      abort(404);
-    }
-
-    if (array_key_exists('id', $post)) {
-      return response()->view('publication.show', ['post' => $post])->header('X-Cache', $isCached ? 'HIT' : 'MISS');
-    }
+    return response()
+      ->view('publication.show', ['post' => $result['post']])
+      ->header('X-Cache', $result['isCached'] ? 'HIT' : 'MISS');
   }
 }
