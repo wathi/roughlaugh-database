@@ -1,12 +1,11 @@
 <nav class="navbar bg-base-100 shadow-sm flex justify-between lg:px-8">
-  <div class="lg:navbar-start">
+  <div>
     <a class=" flex flex-col items-start" href="{{ route('home') }}">
       <div class="lg:text-xl text-lg">ラフｘラフデータベース</div>
       <div class="lg:text-base text-md text-gray-500">rough x laugh database -unofficial fans site- </div>
     </a>
   </div>
-  <div class="lg:navbar-end">
-
+  <div>
     <!-- Desktop Menu -->
     <ul class="menu menu-horizontal px-1 hidden lg:flex">
       <li>
@@ -47,8 +46,8 @@
       </li>
             <li>
         <a href="{{ route('fans.index') }}" class="{{ request()->routeIs('fans.index') ? 'menu-active' : '' }} flex flex-col items-center">  
-          <div class="text-base">ROAD to </div>
-          <div class="text-sm text-gray-500">ラフり隊</div>
+          <div class="text-base">ラフり隊</div>
+          <div class="text-sm text-gray-500">FANS</div>
         </a>
       </li>
     </ul>
@@ -91,6 +90,18 @@
           <a href="{{ route('publication.index') }}" class="{{ request()->routeIs('publication.index') ? 'menu-active' : '' }} flex items-center">  
             <div class="text-sm">書籍・雑誌</div>
             <div class="text-xs text-gray-500">PUBLICATION</div>
+          </a>
+        </li>
+                <li>
+          <a href="{{ route('others.index') }}" class="{{ request()->routeIs('others.index') ? 'menu-active' : '' }} flex items-center">  
+            <div class="text-sm">その他</div>
+            <div class="text-xs text-gray-500">OTHERS</div>
+          </a>
+        </li>
+                <li>
+          <a href="{{ route('fans.index') }}" class="{{ request()->routeIs('fans.index') ? 'menu-active' : '' }} flex items-center">  
+            <div class="text-sm">ラフり隊</div>
+            <div class="text-xs text-gray-500">FANS</div>
           </a>
         </li>
       </ul>
