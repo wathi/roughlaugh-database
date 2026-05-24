@@ -1,17 +1,17 @@
 <x-layout title="CONTACT | ラフｘラフデータベース">
     <h1 class="text-2xl font-bold text-center mb-2">問い合わせ</h1>
     <h2 class="text-xl text-center mb-8">CONTACT</h2>
-    <div class="max-w-6xl mx-auto flex justify-center">
+    <div class="max-w-6xl mx-auto flex justify-center lg:text-base">
       <div>
         <section class="mb-16">
-            <p class="mb-4">
-                情報提供、訂正、ご意見、ご感想など、下記のフォームよりご連絡をお願いいたします。<br />
+            <p class="mb-2">
+                情報提供、訂正、ご意見、ご感想など、下記のフォームよりご連絡をお願いいたします。
                 もしくは管理人まで。
             </p>
-            <p class="mb-4">
+            <p class="mb-2">
                 For information, correction or any questions, please submit the contact form, or contact administrator directly.<br />
             </p>
-            <p>
+            <p class="mb-2">
                 X (Twitter): <a class="twitter-follow-button" href="https://twitter.com/wa_rldb"></a>
             </p>
         </section>
