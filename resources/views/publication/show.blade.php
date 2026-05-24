@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="PUBLICATION| ラフｘラフデータベース">
   <div class="max-w-6xl mx-auto">
     <div>
       <a href="{{ url()->previous() }}"class="btn btn-soft mb-4">

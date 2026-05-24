@@ -11,7 +11,7 @@ class ContactFormController extends Controller
 {
   public function index()
   {
-    return view('contactform');
+    return view('contactform.index');
   }
 
   public function store(Request $request)

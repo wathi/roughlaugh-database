@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="LIVE | ラフｘラフデータベース">
   <div class="max-w-6xl mx-auto">
     <div>
       <a href="{{ url()->previous() }}"class="btn btn-soft mb-4">
@@ -13,8 +13,6 @@
         <div>{{ $post['acf']['source'] }}</div>
       </div>
       <div>{!! $postContent !!}</div>
-      {{-- <div>{!! dd($postContent) !!}</div> --}}
-       {{-- <div>{!! dd($post['content']['rendered']) !!}</div> --}}
     </div>
   </div>
 </x-layout>

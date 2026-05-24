@@ -28,5 +28,5 @@ Route::get('fans', [FansController::class, 'index'])->name('fans.index');
 Route::get('fans/{id}', [FansController::class, 'show'])->name('fans.show');
 Route::get('/clear-cache', [CacheController::class, 'clear']);
 
-Route::get('contact', [ContactFormController::class, 'index'])->name('contactform');
-Route::post('contact', [ContactFormController::class, 'store'])->name('contactform.store');
+Route::get('contactform', [ContactFormController::class, 'index'])->name('contactform');
+Route::post('contactform', [ContactFormController::class, 'store'])->name('contactform.store');
