@@ -1,29 +1,29 @@
-<footer class="bg-base-100 shadow-sm p-8 border-t-2 border-base-300">
+<div class="bg-base-100 shadow-sm p-8 border-t-2 border-base-300">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
     <div>
       <div class="mb-4">
-        <h6 class="lg:text-base text-sm text-gray-700 font-semibold">公式サイト Official Site</h6>
+        <h6 class="lg:text-base text-md text-gray-700 font-semibold">公式サイト Official Site</h6>
         <div class="block">
-          <a href="https://roughlaugh-official.com/" target="_blank" class="text-blue-600 lg:text-sm text-xs link link-hover ">
+          <a href="https://roughlaugh-official.com/" target="_blank" class="text-blue-600 lg:text-md text-sm link link-hover ">
             ラフ×ラフ オフィシャルサイト
           </a>
         </div>
         <div>
-          <a href="https://www.youtube.com/@roughlaugh_official" target="_blank" class="text-blue-600 lg:text-sm text-xs link link-hover">ラフ×ラフ 公式YouTubeチャンネル</a>
+          <a href="https://www.youtube.com/@roughlaugh_official" target="_blank" class="text-blue-600 lg:text-md text-sm link link-hover">ラフ×ラフ 公式YouTubeチャンネル</a>
         </div>
       </div>
       <div>
-        <h6 class="lg:text-base text-sm text-gray-700 font-semibold">関連サイト Related Site</h6>
+        <h6 class="lg:text-base text-md text-gray-700 font-semibold">関連サイト Related Site</h6>
         <div>
-          <a href="https://www.youtube.com/@okinimesete" target="_blank" class="text-blue-600 lg:text-sm text-xs link link-hover">お気に召せての初心者チャンネル</a>
+          <a href="https://www.youtube.com/@okinimesete" target="_blank" class="text-blue-600 lg:text-md text-sm link link-hover">お気に召せての初心者チャンネル</a>
         </div>
         <div>
-          <a href="https://www.tv-tokyo.co.jp/3-c/" target="_blank" class="text-blue-600 lg:text-sm text-xs link link-hover">テレビ東京「青春高校3年C組」</a>
+          <a href="https://www.tv-tokyo.co.jp/3-c/" target="_blank" class="text-blue-600 lg:text-md text-sm link link-hover">テレビ東京「青春高校3年C組」</a>
         </div>
       </div>
     </div>
     <div>
-      <h6 class="lg:text-base text-sm text-gray-700 font-semibold">免責事項 Disclaimer</h6>
+      <h6 class="lg:text-base text-md text-gray-700 font-semibold">免責事項 Disclaimer</h6>
       <p class="text-base-content lg:text-sm text-xs mb-2">
         このサイトは、個人が作成しているファンサイトです。公式情報は<a href="https://roughlaugh-official.com/" target="_blank" class="text-blue-600 link link-hover">ラフｘラフ公式サイト</a>にでご確認ください。
       </p>
@@ -32,14 +32,14 @@
       </p>
     </div>
       <div>
-      <h6 class="lg:text-base text-sm text-gray-700 font-semibold">ご連絡 Contact</h6>
-      <p class="text-base-content lg:text-sm text-xs  mb-2">
-        情報提供、訂正、ご質問、ご要望など、<a href="{{ route('contactform') }}" class="text-blue-600 link link-hover">問い合わせフォーム</a>もしくは管理人までお願いいたします</p>
-      <p class="text-base-content lg:text-sm text-xs ">
-        To provide information, correction or any questions, please submit <a href="{{ route('contactform') }}" class="text-blue-600 link link-hover">the contact form</a> or contact administrator.    </p>
-    </div>
+      <h6 class="lg:text-base text-md text-gray-700 font-semibold">連絡 Contact</h6>
+      <p class="text-base-content lg:text-base text-md ">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJfrCzgg67B38mk6qibHolMF7MLtWR6lsjLuGwUt5auRSF7g/viewform" target="_blank" class="text-blue-600 link link-hover">Google form</a></p> 
+      <p class="text-base-content lg:text-base text-md  mb-2">
+         admin: <a href="https://twitter.com/wa_rldb" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a></p>
+      </div>
   </div>
-</footer>
+</div>
 
 
 
