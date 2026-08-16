@@ -74,6 +74,18 @@
           </a>
         </li>
         <li>
+          <a href="{{ route('info.roughlaugh') }}" class="{{ request()->routeIs('info.*') ? 'menu-active' : '' }} flex items-center">  
+            <div class="text-sm">ラフラフ情報</div>
+            <div class="text-xs text-gray-500">INFO</div>
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('member.index') }}" class="{{ request()->routeIs('member.*') ? 'menu-active' : '' }} flex items-center">  
+            <div class="text-sm">メンバー</div>
+            <div class="text-xs text-gray-500">MEMBER</div>
+          </a>
+        </li>
+        <li>
           <a href="{{ route('content.index') }}" class="{{ request()->routeIs('content.index') ? 'menu-active' : '' }} flex items-center">  
             <div class="text-sm">メディア</div>
             <div class="text-xs text-gray-500">MEDIA</div>
