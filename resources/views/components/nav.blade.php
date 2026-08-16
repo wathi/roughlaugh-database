@@ -15,6 +15,18 @@
         </a>
       </li>
       <li>
+        <a href="{{ route('info.roughlaugh') }}" class="{{ request()->routeIs('info.*') ? 'menu-active' : '' }} flex flex-col items-center">  
+          <div class="text-base">ラフラフ情報</div>
+          <div class="text-sm text-gray-500">INFORMATION</div>
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('member.index') }}" class="{{ request()->routeIs('member.*') ? 'menu-active' : '' }} flex flex-col items-center">  
+          <div class="text-base">メンバー</div>
+          <div class="text-sm text-gray-500">MEMBER</div>
+        </a>
+      </li>
+      <li>
         <a href="{{ route('content.index') }}" class="{{ request()->routeIs('content.index') ? 'menu-active' : '' }} flex flex-col items-center">  
           <div class="text-base">メディア</div>
           <div class="text-sm text-gray-500">MEDIA</div>
@@ -45,13 +57,12 @@
         </a>
       </li>
     </ul>
-        <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden flex flex-col">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-8 w-8 stroke-current"> 
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
-        {{-- <div class="text-xs">Menu</div> --}}
       </div>
       <ul
         tabindex="-1"
@@ -92,7 +103,6 @@
             <div class="text-xs text-gray-500">OTHERS</div>
           </a>
         </li>
-
       </ul>
     </div>
   </div>
