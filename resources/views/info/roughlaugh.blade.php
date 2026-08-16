@@ -24,15 +24,15 @@
         
         <div class="mb-4">
             <p class="font-bold text-gray-700 text-lg mb-1">ラフ×ラフ結成へ、全てのはじまりのストーリー</p>
-            <iframe class="mb-1" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=ygcMAXjy4I4vkkQL&amp;list=PLsBYFoX5QvG4-OLvUoaMTVWC2klrQQWJr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class="mb-1 w-[360px] h-[240px] md:w-[560px] md:h-[315px]" src="https://www.youtube.com/embed/videoseries?si=ygcMAXjy4I4vkkQL&amp;list=PLsBYFoX5QvG4-OLvUoaMTVWC2klrQQWJr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <button class="btn btn-outline">
               <a href="https://youtube.com/playlist?list=PLsBYFoX5QvG4-OLvUoaMTVWC2klrQQWJr&si=75IVm312n4ILeOfA" target="_blank" class="link link-hover">YouTubeプレイリスト</a>
             </button>
         </div>
         <div class="mb-4">
             <p class="font-bold text-gray-700 text-lg mb-1">ラフ×ラフ オーディション</p>
-            <iframe class="mb-1" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=al7rUJtOhD_TeJow&amp;list=PLsBYFoX5QvG51vQwoaj2ah71gVIbJkTdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <button class="btn btn-outline">
+            <iframe class="mb-1 w-[360px] h-[240px] md:w-[560px] md:h-[315px]" src="https://www.youtube.com/embed/videoseries?si=al7rUJtOhD_TeJow&amp;list=PLsBYFoX5QvG51vQwoaj2ah71gVIbJkTdZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <button class="btn btn-outline"
               <a href="https://youtube.com/playlist?list=PLsBYFoX5QvG51vQwoaj2ah71gVIbJkTdZ&si=5km9pplvgVhVPA6O" target="_blank" class="link link-hover">YouTubeプレイリスト</a>
             </button>
         </div>
